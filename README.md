@@ -3,7 +3,7 @@
 HOW TO RUN THE PROJECT:
 
 1. Clone the git project main branch to your local drive
-2. Use command prompt to load the Flask app: python app2.py
+2. Use command prompt to load the Flask app: {python app2.py}
 3. Load the HTML from the root folder: index.HTML
 
 ## Background Story: 
