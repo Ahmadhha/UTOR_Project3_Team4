@@ -19,7 +19,7 @@
       </div>
     </div>
 
-    <div class="row">
+    <div align="center" class="row">
       <div class="col-md-2">
         <div class="well">
           <h5>Countries:</h5>
@@ -30,7 +30,7 @@
 
 
 
-      <div class="col-md-12">
+      <div align="center" class="col-md-12">
         <div id="area_bar_diet"></div>
       </div>
       <div class="col-md-12">
@@ -38,7 +38,7 @@
       </div>
     </div>
 
-    <div class="col-md-2">
+    <div align="center" class="col-md-2">
       <div class="well">
         <h5>Select disease type</h5>
         <select id="disease_select">
@@ -46,7 +46,7 @@
       </div>
     </div>
 
-    <div class="col-md-2">
+    <div align="center" class="col-md-2">
       <div class="well">
         <h5>Select diet type</h5>
         <select id="diet_select" onchange="optionChanged_diet(this.value)">
@@ -54,9 +54,10 @@
       </div>
     </div>
 
-    <div class="row">
+    <div align="center" class="row">
       <div class="col-md-12">
         <div id="diet_disease_correlation"></div>
+        <canvas id="myChart_scatter" style="width:100%;max-width:700px"></canvas>
       </div>
     </div>
   </div>
@@ -68,8 +69,13 @@
 
   <script src="./static/js/logic.js"></script>
 
+  <script
+  src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+  </script>
 
-  
+  <div align="center">
+    <canvas id="myChart_3" style="width:100%;max-width:700px"></canvas>
+  </div>div>
 </body>
 
 </html>
