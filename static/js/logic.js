@@ -68,6 +68,7 @@ for (let i = 0; i < diet_list.length; i++) {
 function init() {
     disease_plotter('Afghanistan')
     diet_plotter('Afghanistan')
+    daly_plotter('Afghanistan')
 
     correlation_plotter('Afghanistan', 'Cardiovascular Diseases', 'Sugar')
 
@@ -109,6 +110,7 @@ function init() {
 function optionChanged(value) {
     disease_plotter(value)
     diet_plotter(value)
+    daly_plotter(value)
 
     correlation_plotter(value, 'Cardiovascular Diseases', 'Sugar')
 
@@ -281,29 +283,121 @@ function correlation_plotter(country_value, disease_value, diet_value) {
         let disease_values_list = []
         let diet_values_list = []
 
+        xy_values_list = []
+
         for (let i = 0; i < diet_disease.length; i++) {
             if (diet_disease[i].Entity == country_value) {
-
+                
                 disease_values_list.push(diet_disease[i][ disease_dict[disease_value] ])
                 //disease_values_list.push( diet_disease[i].Cardiovascular_diseases )
+
                 diet_values_list.push(diet_disease[i][ diet_dict[diet_value] ])
+                
+                temp_dict = { x: diet_disease[i][ disease_dict[disease_value] ], y: diet_disease[i][ diet_dict[diet_value] ] }
+                xy_values_list.push( temp_dict )
+
                 //console.log(disease_dict[disease_value])
                 //console.log(diet_disease[i].Entity)
             }
 
         }
+
+        
+
         var trace_scatter = {
             x: diet_values_list,
             y: disease_values_list,
             mode: 'markers',
             type: 'scatter'
           };
+
+        new Chart("myChart_scatter", {
+        type: "scatter",
+        data: {
+            datasets: [{
+            pointRadius: 4,
+            pointBackgroundColor: "rgba(0,0,255,1)",
+            data: xy_values_list
+            }]
+        },
+        options:{title: {
+            display: true,
+            text: `Diet and Disease Correlation: ${country_value}`,
+            fontSize: 28
+          },
+          legend: {display: false},
+          scales: { xAxes: [{
+            scaleLabel: {
+              display: true,
+              labelString: disease_value
+              }
+            }], 
+            yAxes: [{
+                scaleLabel: {
+                  display: true,
+                  labelString: diet_value
+                  }
+                }] } }
+        });
         
-        Plotly.newPlot('diet_disease_correlation', [trace_scatter])
+        //Plotly.newPlot('diet_disease_correlation', [trace_scatter])
         //console.log(disease_values_list)
         //console.log(diet_values_list)
         //console.log(diet_disease)
+
     })
 }; 
+
+function daly_plotter(country_value) {
+    d3.json(url).then(function(data) {
+        let daly_data=data['daly']
+        let Year_list = []
+        let Disability_adjusted_life_years_list = []
+
+
+        for (let i = 0; i < daly_data.length; i++) {
+            if (daly_data[i].Entity == country_value) {
+                Year_list.push(daly_data[i].Year)
+                Disability_adjusted_life_years_list.push(daly_data[i].Disability_adjusted_life_years)
+            }
+        }
+        //console.log(Year_list)
+        //console.log(Sugar_list)
+
+        new Chart("myChart_3", {
+            type: "line",
+            data: {
+              labels: Year_list,
+              datasets: [{
+                //backgroundColor: "rgba(0,0,0,1.0)",
+                borderColor: "rgba(0,0,0,0.1)",
+                data: Disability_adjusted_life_years_list
+              }]
+            },
+            options:{ title: {
+                display: true,
+                text: `Disability Adjusted Life Years: ${country_value}`,
+                fontSize: 28
+              },
+              legend: {display: false},
+              scales: { xAxes: [{
+                scaleLabel: {
+                  display: true,
+                  labelString: 'Time'
+                  }
+                }], 
+                yAxes: [{
+                    scaleLabel: {
+                      display: true,
+                      labelString: 'Disability Adjusted Life Years Index'
+                      }
+                    }] } }
+          });
+
+    })
+
+}; 
+
+
 
 init()
