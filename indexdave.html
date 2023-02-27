@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+<body>
+    
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+        <div class="container">
+          <a class="navbar-brand" href="#">Team 4: Nutritional and Disease Data By Country</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <!-- <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li> -->
+              <!-- <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Nurtritional Data</a></li>
+                  <li><a class="dropdown-item" href="#">Disease Data</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Diet-Disease Correlation</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled">Disabled</a>
+              </li> -->
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+    </nav>
+    
+
+    <!-- powerpoint -->
+    <section id="section 1" class="p-5">
+      <div class="container">
+        <div class="d-sm-flex align-items-center">
+          <div class="col">
+            <h3>Background</h3>
+            <div class="p fs-5">
+              <ul>
+                <br>
+                <li><b>Team:</b> Data Analytics team in VizCARE Inc. - an emerging startup in health care data services based in Toronto</li>
+                <ul>
+                  <br>
+                  <li><b>Members:</b> Miga, David, Ahmed, Peter</li>
+                </ul> 
+                <br>
+                <li><b>Client:</b> Ontario Ministry of Healthcare*</li>
+                <br>
+                <li><b>Goal:</b> Provide a visual analysis of the dietary compositions and disease burden of different coutries worldwide</li>
+                <br>
+                <li><b>Main Deliverable:</b> An interactive webpage that allows selection of different criteria representing the target data visualization</li>
+              <br>
+              </ul>
+            </div>
+          </div>
+          <img class="img-fluid w-50 mx-5 d-sm-block" src="img/healthcare-analytics-image.png" alt="Source: https://matomo.org/wp-content/uploads/2019/02/healthcare-analytics-image.png" />
+        
+        </div>
+        <div class="d-sm-flex align-items-center">
+          <div class="p">*Fictional - not affiliated with the Ontario Ministry of Health</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="section 2" class="p-5 bg-dark text-light">
+      <div class="container">
+        <div class="d-sm-flex align-items-center">
+          <div class="col">
+            <h3>Data Source</h3>
+            <div class="p fs-5">
+              <ul>
+                <br>
+                <li>Our World in Data  (https://ourworldindata.org/organization)</li>
+                <ul>
+                  <br>
+                  <li>Project of Global Change Data Lab, a UK based Non-profit organization </li>
+                  <br>
+                  <li>Focused on Poverty, disease, hunger, climate change, war, existential risks, and inequality</li>
+                </ul> 
+                <br>
+                <li><b>License:</b> Open access under the Creative Commons BY license</li>
+                <br>
+                <li><b>Databases:</b></li>
+                <ul>
+                  <br>
+                  <li><b>Diet Compositions</b></li>
+                  <br>
+                  Hannah Ritchie, Pablo Rosado and Max Roser (2017) - "Diet Compositions". Published online at OurWorldInData.org.
+                  Retrieved from: 'https://ourworldindata.org/diet-compositions' [Online Resource]
+                  <br><br>
+                  <li><b>Burden of Disease</b></li>
+                  <br>
+                  Max Roser, Hannah Ritchie and Fiona Spooner (2021) - "Burden of disease". Published online at OurWorldInData.org.
+                  Retrieved from: 'https://ourworldindata.org/burden-of-disease' [Online Resource]
+                </ul>
+              </ul>
+            </div>
+          </div>
+          <img class="img-fluid w-50 mx-5 d-sm-block" src="img/Capture.JPG" alt="Source: https://ourworldindata.org/" />
+        </div>
+      </div>
+    </section>
+
+    <section id="section 3" class="p-5">
+      <div class="container">
+        <div class="d-sm-flex align-items-center">
+          <div class="col">
+            <h3>Data Set Descriptions</h3>
+            <div class="p fs-5">
+              <ul>
+                <br>
+                <h4>Diet Composition Database</h4>
+                <ul>
+                  <br>
+                  <b>Diet compositions by macronutrient</b>
+                  <br>
+                  The average per capita supply of calories derived from carbohydrates, protein and fat, all measured in
+                  kilocalories per person per day.
+                  <br><br>
+                  <b>Diet compositions by food groups</b>
+                  <br>
+                  Average per capita dietary energy supply by commodity groups, measured in kilocalories per person per day.
+                  <br>
+                </ul> 
+                <br>
+                <h4>Burden of Disease Database</h4>
+                <ul>
+                  <br>
+                  <li><b>Burden of Disease by Cause</b></li>
+                  <br>
+                  Total disease burden, measured in Disability-Adjusted Life Years (DALYs) by
+                  sub-category of disease or injury.
+                  
+                  <br><br>
+                  <li><b>Share of Total Disease Burden by Cause</b></li>
+                  <br>
+                  Total disease burden, measured in Disability-Adjusted Life Years (DALYs) by sub-category
+                  of disease or injury.
+                  <br><br>
+                </ul>
+                </ul>
+              </ul>
+            </div>
+            <div class="p fs-6">*Note: Disability-Adjusted Life Years (DALYs) measure the total burden of disease - one DALY equals one lost year of healthy life.</div>
+          </div>
+          <img class="img-fluid w-50 mx-5 d-sm-block" src="img/new_erd.JPG" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <section id="section 4" class="p-5 bg-dark text-light">
+      <div class="container">
+        <div class="d-sm-flex align-items-center">
+          <div class="col">
+            <h3>Data Set Limitations</h3>
+            <div class="p fs-5">
+              <ul>
+                <br>
+                <b>Diet Composition Database</b>
+                <ul>
+                  <br>
+                  <li>Data limited to Year 2013</li>
+                  <br>
+                  <li>Overall country information only available</li>
+                </ul> 
+                <br>
+                <b>Burden of Disease Database</b>
+                <ul>
+                  <br>
+                  <li>DALYs does not differentiate between unlhealthy life and death by disease</li>
+                  <br>
+                  <li>DALYs is only an estimation</li>
+                  </ul>
+              </ul>
+            </div>
+          </div>
+          <img class="img-fluid w-50 mx-5 d-sm-block" src="img/limitations.png" alt="Source: https://www.shutterstock.com/image-vector/business-difficulty-struggle-career-obstacle-260nw-1960379689.jpg" />
+        </div>
+      </div>
+    </section>
+
+    <section id="section 5" class="p-5">
+      <div class="container">
+        <div class="d-sm-flex align-items-center">
+          <div class="col">
+            <h3>Research Questions and Deliverables</h3>
+            <div class="p fs-5">
+              <ul>
+                <b>Diet:</b>
+                <ul>
+                  <li>How does Diet Composition Vary by Country</li>
+                  <li>How does Diet Composition Vary over time</li>
+                </ul> 
+                <b>Disease:</b>
+                <ul>
+                  <li>How does disease burden vary by Country</li>
+                  <li>How does disease burden vary over time</li>
+                </ul>
+                <b>Correlation:</b>
+                <ul>
+                  <li>How does the diet affect disease burden by country</li>
+                </ul>
+              </ul>
+            </div>
+          </div>
+          <img class="img-fluid w-50 mx-5 d-sm-block" src="img/globe.jpg" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <section id="section 6" class="p-5 bg-dark text-light">
+      <div class="container">
+        <div class="d-sm-flex align-items-center">
+          <img class="img-fluid w-50 mx-5 d-sm-block" src="img/data_flow.png" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <section id="section 7" class="p-5">
+      <div class="container">
+        <div class="d-sm-flex align-items-center">
+          <!-- <div class="col">
+            <h3>Script Overview</h3>
+            <div class="p">
+              <ul>
+                <li>A</li>
+                <ul>
+                  <li>a</li>
+                  <li>b</li>
+                  <li>c</li>
+                </ul> 
+                <li>B</li>
+                <ul>
+                  <li>a</li>
+                  <li>b</li>
+                  <li>c</li>
+                </ul>
+                <li>D</li>
+                <ul>
+                  <li>a</li>
+                  <li>b</li>
+                  <li>c</li>
+                </ul>
+              </ul>
+            </div>
+          </div> -->
+          <div class="p">Creating Script to Creat Non-Relational Database</div>
+          <img class="img-fluid w-150 mx-5 d-sm-block" src="img/script_1.png" alt="" />
+          <!-- <img class="img-fluid w-50 mx-5 d-sm-block" src="img/script_2.png" alt="" />
+          <img class="img-fluid w-50 mx-5 d-sm-block" src="img/script_3.jpg" alt="" /> -->
+        </div>
+      </div>
+    </section>
+
+    <section id="section 8" class="p-5 bg-dark text-light">
+      <div class="container">
+        <div class="d-sm-flex align-items-center">
+          <!-- <div class="col">
+            <h3>Script Overview</h3>
+            <div class="p">
+              <ul>
+                <li>A</li>
+                <ul>
+                  <li>a</li>
+                  <li>b</li>
+                  <li>c</li>
+                </ul> 
+                <li>B</li>
+                <ul>
+                  <li>a</li>
+                  <li>b</li>
+                  <li>c</li>
+                </ul>
+                <li>D</li>
+                <ul>
+                  <li>a</li>
+                  <li>b</li>
+                  <li>c</li>
+                </ul>
+              </ul>
+            </div>
+          </div> -->
+          <img class="img-fluid w-130 mx-5 d-sm-block" src="img/script_2.png" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <section id="section 9" class="p-5">
+      <div class="container">
+        <div class="d-sm-flex align-items-center">
+          <!-- <div class="col">
+            <h3>Script Overview</h3>
+            <div class="p">
+              <ul>
+                <li>A</li>
+                <ul>
+                  <li>a</li>
+                  <li>b</li>
+                  <li>c</li>
+                </ul> 
+                <li>B</li>
+                <ul>
+                  <li>a</li>
+                  <li>b</li>
+                  <li>c</li>
+                </ul>
+                <li>D</li>
+                <ul>
+                  <li>a</li>
+                  <li>b</li>
+                  <li>c</li>
+                </ul>
+              </ul>
+            </div>
+          </div> -->
+          <img class="img-fluid w-80 mx-5 d-sm-block" src="img/script_3.png" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Showcase -->
+    <section class="bg-dark text-light p-5 text-center">
+      <div class="container">
+        <div class="d-sm-flex align-items-center">
+          <div>
+            <h1>Choose a Country</h1>
+            <div class="well">
+              <h5>Countries:</h4>
+              <select id="selDataset" onchange="optionChanged(this.value)">
+              </select>
+            </div>
+          </div>
+          <img class="img-fluid w-50 mx-5 d-sm-block" src="img/globe.jpg" alt="" />          
+        </div>
+      </div>
+    </section>
+
+    <!-- Graphs -->
+    <!-- section 1 -->
+  <section id="graph1" class="p-5">
+    <div class="container">
+      <div class="d-lg-flex align-items-center">
+        <div class="col-md-12">
+          <div id="area_bar_diet"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- section 2 -->
+    <section id="graph2" class="p-5 bg-dark text-light">
+      <div class="container">
+        <div class="d-lg-flex align-items-center">
+          <div class="col-md-12">
+            <div id="area_bar_disease"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- section 3 -->
+    <section id="graph3" class="p-5 bg-success-subtle">
+      <div class="container">
+        <div class="d-sm-flex align-items-center">
+          <div class="col">
+            <h2>Nutrient</h2>
+            <div class="well">
+              <h5>Select diet type</h5>
+            <select id="diet_select" onchange="optionChanged_diet(this.value)">
+            </select>
+            <h2>Disease</h2>
+            <div class="well">
+              <h5>Select disease type</h5>
+              <select id="disease_select" onchange="optionChanged_diet(this.value)">
+              </select>
+            </div>
+          </div>
+          </div>
+          <div class="col-md-9">
+            <div id="diet_disease_correlation"></div>
+            <canvas id="myChart_scatter" style="width:100%;max-width:1000px"></canvas>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="graph4" class="p-5 bg-primary-subtle">
+      <div class="container">
+        <div class="d-sm-flex align-items-center">
+          <canvas id="myChart_3" style="width:100%;max-width:1000px"></canvas>
+        </div>
+      </div>
+    </section>
+
+
+
+
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <!-- <script src="./miga_draft/static/js/logic.js"></script> -->
+    <script src="./static/js/logic.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+
+</body>
+</html>
