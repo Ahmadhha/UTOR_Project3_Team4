@@ -109,8 +109,8 @@
     <!-- section 1 -->
   <section id="graph1" class="p-5">
     <div class="container">
-      <div class="d-sm-flex align-items-center">
-        <div class="col-md-10">
+      <div class="d-lg-flex align-items-center">
+        <div class="col-md-12">
           <div id="area_bar_diet"></div>
         </div>
       </div>
@@ -120,7 +120,7 @@
     <!-- section 2 -->
     <section id="graph2" class="p-5 bg-dark text-light">
       <div class="container">
-        <div class="d-sm-flex align-items-center">
+        <div class="d-lg-flex align-items-center">
           <div class="col-md-10">
             <div id="area_bar_disease"></div>
           </div>
@@ -129,7 +129,7 @@
     </section>
 
     <!-- section 3 -->
-    <section id="graph3" class="p-5">
+    <section id="graph3" class="p-5 bg-success-subtle">
       <div class="container">
         <div class="d-sm-flex align-items-center">
           <div class="col">
@@ -148,11 +148,19 @@
           </div>
           <div class="col-md-9">
             <div id="diet_disease_correlation"></div>
+            <canvas id="myChart_scatter" style="width:100%;max-width:1000px"></canvas>
           </div>
         </div>
       </div>
     </section>
 
+    <section id="graph4" class="p-5 bg-primary-subtle">
+      <div class="container">
+        <div class="d-sm-flex align-items-center">
+          <canvas id="myChart_3" style="width:100%;max-width:1000px"></canvas>
+        </div>
+      </div>
+    </section>
 
 
 
@@ -162,7 +170,7 @@
     <!-- <script src="./miga_draft/static/js/logic.js"></script> -->
     <script src="./static/js/logic.js"></script>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
 
 </body>
 </html>
