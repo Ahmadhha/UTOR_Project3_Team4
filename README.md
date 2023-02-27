@@ -1,6 +1,6 @@
 # Project Title: VizCARE Nutritional and Disease Data by Country 
 
-HOW TO RUN THE PROJECT:
+### HOW TO RUN THE PROJECT:
 
 1. Clone the git project main branch to your local drive
 2. Use command prompt to load the Flask app: {python app2.py}
@@ -16,7 +16,11 @@ Goal: Provide a visual analysis of the dietary compositions and disease burden o
 
 Main Deliverable: An interactive webpage that allows selection of different criteria representing the target data visualization
 
-## Research questions
+#### Webpage Snippet
+
+![Webpage Snippet](https://raw.githubusercontent.com/Ahmadhha/UTOR_Project3_Team4/main/img/partialpreview.JPG)
+
+## Research questions:
 
 ### Diet:
 
@@ -34,7 +38,7 @@ Main Deliverable: An interactive webpage that allows selection of different crit
 
 - How does the diet affect disease burden by country</li>
  
-##	Data Sources
+##	Data Sources:
 
 - Our World in Data  (https://ourworldindata.org/organization)
   - Project of Global Change Data Lab, a UK based Non-profit organization
